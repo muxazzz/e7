@@ -1,0 +1,25 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+{% block title %}
+Список сообщений
+{% endblock %}
+
+{% block body %}
+<table>
+<tr>
+<td>ID</td>
+<td>Сообщение</td>
+</tr>
+    {% for el in doc %}
+    <tr>
+      <td>{{ el._id }}</td>
+      <td>{{ el.text }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
